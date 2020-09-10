@@ -8,7 +8,7 @@
                 </div>
                 
                 <div class="categories">
-                    <div class="row mx-auto ml-5">
+                    <div class="row">
                         <div class="col-3 ">
                             <v-img src="@/assets/features/LongSleeve.jpg" />
                         </div>
@@ -23,7 +23,7 @@
                         </div>
                     </div>
                     
-                     <div class="row mx-auto ml-5">
+                     <div class="row">
                         <div class="col-3">
                             <v-img src="@/assets/features/mens-pants-500x500.jpg" />
                         </div>
@@ -62,7 +62,7 @@
     padding-top: 50px;
 }
 h2 {
-    font-size: 2.2rem;
+    font-size: 1.5rem;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     margin: 0;
