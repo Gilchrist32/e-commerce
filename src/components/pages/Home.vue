@@ -3,7 +3,7 @@
 
       <v-layout class="hero-container">
         <v-row align="center" justify="center">
-          <v-col cols="11">
+          <v-col cols="12">
             <v-row align="center" justify="center">
               <v-col cols="12" md="7" sm="12">
                 <h1 
