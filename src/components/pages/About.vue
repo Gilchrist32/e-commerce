@@ -42,11 +42,11 @@
     text-align: justify;
     text-justify: inter-word;
     line-height: 2rem;
-    font-size: 17px;
+    font-size: 15px;
     font-family: 'Poppins', sans-serif;
 }
 h2 {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     margin: 0;
