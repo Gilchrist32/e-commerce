@@ -1,6 +1,6 @@
 <template>
     <v-navigation-drawer v-model="show" clipped app :class="mode ? 'nav-drawer' : undefined" fixed
-        style="background-color: #F48FB1"
+        src="@/assets/img/sidebar.jpg"
     >
         <v-layout>
             <v-flex>
@@ -36,13 +36,13 @@
                         <br>
 
                         <v-list-item>
-                            <v-btn depressed text @click="authDialog = true">
+                            <v-btn depressed block text @click="authDialog = true">
                                 <v-icon left>mdi-login</v-icon>
                                 <span class="text-capitalize">Log In</span>
                             </v-btn>
                         </v-list-item>
                         <v-list-item>
-                            <v-btn depressed text @click="authDialog = true">
+                            <v-btn depressed text block @click="authDialog = true">
                                 <v-badge left color="green">
                                 <span slot="badge">0</span>
                                 <v-icon left>mdi-cart</v-icon>
@@ -104,4 +104,5 @@
 .nav-drawer {
     background-color: rgb(251 253 255);
 }
+
 </style>
