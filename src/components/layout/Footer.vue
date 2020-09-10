@@ -5,7 +5,7 @@
         <div class="container">
           <div class="row">
             <div class="footer-col col-md-4 text-center">
-                    <v-img src="@/assets/blogo/logo.png" alt="logo" width="150px" class="mx-auto"></v-img>
+                    <v-img src="@/assets/img/ECOSHOP.svg" alt="ECOSHOP" width="150px" class="mx-auto"></v-img>
                      <span class="name">
                       Our Purpose Is to Sustainably Make the Pleasure and
                       Benefits of Fashion Accesible to the Many.
