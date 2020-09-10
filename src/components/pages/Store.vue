@@ -1,164 +1,167 @@
 <template>
-   <v-card class="mx-auto store" flat id="store">
+    <section id="store">
 
-       <v-container>
-            <div class="font-weight-normal text-uppercase subtitle text-center">
-                <h2>PRODUCTS</h2>
-            </div>    
-            <p>Jacket list</p>
-            <v-row>
-                <v-col cols="12" md="3" class="mb-4">
+        <v-card class="mx-auto" flat id="card">
+            <v-container>
+                <v-row>
+                    <v-col>
+                        <h1 
+                            class="font-weight-bold pb-3 text-center" 
+                            style="font-size: 1.8rem; color: #0a0a3a;"
+                        >
+                        Products
+                        </h1>
+                    </v-col>
+                </v-row>
+            </v-container>
+        <v-btn class="ml-5" color="#F48FB1" depressed>All Products &#8594;</v-btn>
+        <v-container>
+            <v-card id="products">
+            <horizontal-list :items="jackets" class="mx-12">
+                <template v-slot:default="{ item }">
                     <v-hover v-slot:default="{hover}">
-                        <v-card class="product" align="center">
-                            <v-img src="@/assets/Products/Jacket/Men/3.jpg" width="150" height="150"></v-img>
-                            <v-card-text>Jacket Long Sleeve Men</v-card-text>
-                             ₱ 1280.00
+                        <v-card flat outlined :class="{ up: hover }" :elevation="hover ? 7 : 0" max-width="300" align="center">
+                            <v-img height="200px" width="150" :src="item.image" :lazy-src="item.image">
                             <v-expand-transition>
                                 <div v-if="hover" class="d-flex transition-fast-in-fast-out red v-card--reveal display-3 white--text"
                                 style="height: 100%">
                                 <v-btn outlined color="white">Detail</v-btn>
                                 </div>
                             </v-expand-transition>
+                            </v-img>
+                            <v-card-text class="px-3" align="left">
+                                <div class="text--primary font-weight-medium">
+                                    {{ item.jacket }}
+                                </div>
+                                <div class="text-secondary pt-2">
+                                    {{ item.price }}
+                                </div>
+                            </v-card-text>
+
+                            <v-card-actions>
+                                <v-spacer></v-spacer>
+                                <v-btn  block class="pa-0" depressed color="#F48FB1">
+                                    Buy Now
+                                </v-btn>
+                            </v-card-actions>
                         </v-card>
                     </v-hover>
-                </v-col>
-                <v-col cols="12" md="3" class="mb-4">
+                </template>
+            </horizontal-list>
+            </v-card>
+        </v-container>
+
+         <v-container>
+            <v-card id="products">
+            <horizontal-list :items="shirt" class="mx-12">
+                <template v-slot:default="{ item }">
                     <v-hover v-slot:default="{hover}">
-                        <v-card class="product" align="center">
-                            <v-img src="@/assets/Products/Jacket/Men/7.jpg" width="150" height="150"></v-img>
-                            <v-card-text>Jacket Red Long Sleeve Men</v-card-text>
-                             ₱ 800.00
+                        <v-card flat outlined :class="{ up: hover }" :elevation="hover ? 7 : 0" max-width="300" align="center">
+                            <v-img height="200px" width="150" :src="item.image" :lazy-src="item.image">
                             <v-expand-transition>
                                 <div v-if="hover" class="d-flex transition-fast-in-fast-out red v-card--reveal display-3 white--text"
                                 style="height: 100%">
                                 <v-btn outlined color="white">Detail</v-btn>
                                 </div>
                             </v-expand-transition>
-                        </v-card>
-                    </v-hover>
-                </v-col>
-                <v-col cols="12" md="3" class="mb-4">
-                    <v-hover v-slot:default="{hover}">
-                        <v-card class="product" align="center">
-                            <v-img src="@/assets/Products/Jacket/Female/1.jpg" width="150" height="150"></v-img>
-                            <v-card-text> Stripe Jacket Female</v-card-text>
-                             ₱ 400.00
-                            <v-expand-transition>
-                                <div v-if="hover" class="d-flex transition-fast-in-fast-out red v-card--reveal display-3 white--text"
-                                style="height: 100%">
-                                <v-btn outlined color="white">Detail</v-btn>
+                            </v-img>
+                            <v-card-text class="px-3" align="left">
+                                <div class="text--primary font-weight-medium">
+                                    {{ item.jacket }}
                                 </div>
-                            </v-expand-transition>
-                        </v-card>
-                    </v-hover>
-                </v-col>
-                <v-col cols="12" md="3" class="mb-4">
-                    <v-hover v-slot:default="{hover}">
-                        <v-card class="product" align="center">
-                            <v-img src="@/assets/Products/Jacket/Female/7.jpg" width="150" height="150"></v-img>
-                            <v-card-text> Sport Jacket Female</v-card-text>
-                             ₱ 600.00
-                            <v-expand-transition>
-                                <div v-if="hover" class="d-flex transition-fast-in-fast-out red v-card--reveal display-3 white--text"
-                                style="height: 100%">
-                                <v-btn outlined color="white">Detail</v-btn>
+                                <div class="text-secondary pt-2">
+                                    {{ item.price }}
                                 </div>
-                            </v-expand-transition>
+                            </v-card-text>
+
+                            <v-card-actions>
+                                <v-spacer></v-spacer>
+                                <v-btn  block class="pa-0" depressed color="#F48FB1">
+                                    Buy Now
+                                </v-btn>
+                            </v-card-actions>
                         </v-card>
                     </v-hover>
-                </v-col>
-                <a href="" class="ma-auto">Show more &#8594;</a>
-            </v-row>
-            <p>Shirt list</p>
-            <v-row>
-                <v-col cols="12" md="3" class="mb-4">
-                    <v-hover v-slot:default="{hover}">
-                        <v-card class="product" align="center">
-                            <v-img src="@/assets/Products/Shirt/Female/1.jpg" width="150" height="150"></v-img>
-                            <v-card-text>Polo Shirt for Female</v-card-text>
-                             ₱ 220.00
-                            <v-expand-transition>
-                                <div v-if="hover" class="d-flex transition-fast-in-fast-out red v-card--reveal display-3 white--text"
-                                style="height: 100%">
-                                <v-btn outlined color="white">Detail</v-btn>
-                                </div>
-                            </v-expand-transition>
-                        </v-card>
-                    </v-hover>
-                </v-col>
-                <v-col cols="12" md="3" class="mb-4">
-                    <v-hover v-slot:default="{hover}">
-                        <v-card class="product" align="center">
-                            <v-img src="@/assets/Products/Shirt/Female/2.jpg" width="150" height="150"></v-img>
-                            <v-card-text>Polo</v-card-text>
-                             ₱ 140.00
-                            <v-expand-transition>
-                                <div v-if="hover" class="d-flex transition-fast-in-fast-out red v-card--reveal display-3 white--text"
-                                style="height: 100%">
-                                <v-btn outlined color="white">Detail</v-btn>
-                                </div>
-                            </v-expand-transition>
-                        </v-card>
-                    </v-hover>
-                </v-col>
-                <v-col cols="12" md="3" class="mb-4">
-                    <v-hover v-slot:default="{hover}">
-                        <v-card class="product" align="center">
-                            <v-img src="@/assets/Products/Shirt/Female/3.jpg" width="150" height="150"></v-img>
-                            <v-card-text>Unicorn Shirt Female</v-card-text>
-                             ₱ 110.00
-                            <v-expand-transition>
-                                <div v-if="hover" class="d-flex transition-fast-in-fast-out red v-card--reveal display-3 white--text"
-                                style="height: 100%">
-                                <v-btn outlined color="white">Detail</v-btn>
-                                </div>
-                            </v-expand-transition>
-                        </v-card>
-                    </v-hover>
-                </v-col>
-                <v-col cols="12" md="3" class="mb-4">
-                    <v-hover v-slot:default="{hover}">
-                        <v-card class="product" align="center">
-                            <v-img src="@/assets/Products/Shirt/Female/4.jpg" width="150" height="150"></v-img>
-                            <v-card-text>Customised Design t-shirt</v-card-text>
-                             ₱ 110.00
-                            <v-expand-transition>
-                                <div v-if="hover" class="d-flex transition-fast-in-fast-out red v-card--reveal display-3 white--text"
-                                style="height: 100%">
-                                <v-btn outlined color="white">Detail</v-btn>
-                                </div>
-                            </v-expand-transition>
-                        </v-card>
-                    </v-hover>
-                </v-col>
-                <a href="" class="ma-auto">Show more &#8594;</a>
-            </v-row>
-       </v-container>
-   </v-card>
+                </template>
+            </horizontal-list>
+            </v-card>
+        </v-container>
+        </v-card>
+    </section>
 </template>
 
 <script>
-    import { mapState } from 'vuex'
-
     export default {
-        name: 'store',
-        computed: {
-            ...mapState(['mode'])
+        name: 'english-video-section',
+        
+        components: {
+            HorizontalList: () => import('vue-horizontal-list')
+        },
+        data () {
+            return {
+                jackets: [
+                    {
+                        id: 0,
+                        jacket: "Jacket Long Sleeve Men",
+                        price: '₱ 1280.00',
+                        image: 'https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/jacket%2Fmen%2F3.jpg?alt=media&token=8f7bc3bc-df35-4d0d-9f5e-74f0c07a07b6'
+                    },
+                    {
+                        id: 1,
+                        jacket: "Jacket Red Long Sleeve Men",
+                        price: "₱ 800.00",
+                        image: "https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/jacket%2Fmen%2F7.jpg?alt=media&token=962a0199-7bfb-456e-97b2-ace7fb8b3205"
+                    },
+                    {
+                        id: 2,
+                        jacket: "Stripe Jacket Female",
+                        price: "₱ 400.00",
+                        image: 'https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/jacket%2Ffemale%2F1.jpg?alt=media&token=4b95a15c-3849-489a-9922-5ea6cd30c0ef'
+                    },
+                    {
+                        id: 3,
+                        jacket: "Sport Jacket Female",
+                        price: "₱ 600.00",
+                        image: 'https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/jacket%2Ffemale%2F7.jpg?alt=media&token=9ef81dcf-fbb6-46c2-acae-f33a0c286134'
+                    },
+                ],
+                shirt: [
+                    {
+                        id: 0,
+                        jacket: "Polo Shirt for Female",
+                        price: '₱ 220.00',
+                        image: 'https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/shirt%2Ffemale%2F1.jpg?alt=media&token=42bbcd36-7f3b-47cf-80a7-212e440a4601'
+                    },
+                    {
+                        id: 1,
+                        jacket: "Polo",
+                        price: "₱ 140.00",
+                        image: "https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/shirt%2Ffemale%2F2.jpg?alt=media&token=2d452e9a-9519-4bd5-b86e-1b57353b3902"
+                    },
+                    {
+                        id: 2,
+                        jacket: "Unicorn Shirt Female",
+                        price: "₱ 110.00",
+                        image: 'https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/shirt%2Ffemale%2F3.jpg?alt=media&token=ddd90fda-2cfa-4526-b75b-921255c36388'
+                    },
+                    {
+                        id: 3,
+                        jacket: "Customised Designer T-Shirt ",
+                        price: "₱ 110.00",
+                        image: 'https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/shirt%2Ffemale%2F4.jpg?alt=media&token=fa5a39aa-e9fa-4d7c-8394-e0818f9fc985'
+                    },
+                ]
+            }
         }
     }
 </script>
-
-<style scoped lang="scss">
-.v-card {
+<style  scoped>
+#card {
     border-radius: 0 !important;
     -moz-webkit-border-radius: 0;
     min-height: 100vh;
     padding-top: 50px;
 }
-.product{
-    min-height: 20vh;
-}
-
 .v-card--reveal{
     align-items: center;
     bottom: 0;
@@ -167,20 +170,7 @@
     position: absolute;
     width: 100%;
     }
-h2 {
-    font-size: 2.2rem;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    margin: 0;
-}
-.categories{
-    margin: 0px 0;
-}
-.col-3{
-    flex-basis: 30%;
-    min-width: 200px;
-}
-.col-3 img{
-    width: 50%;
+#products{
+    background: radial-gradient(#fff,#ffd6d6);
 }
 </style>
