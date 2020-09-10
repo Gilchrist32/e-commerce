@@ -1,80 +1,70 @@
 <template>
-   <v-card class="mx-auto" flat id="features">
+    <section id="services">
+        <v-layout>
+            <v-container>
+                <v-row class="goal-title">
+                    <v-col>
+                        <h1 
+                            class="font-weight-bold pb-3 text-center" 
+                            style="font-size: 1.8rem; color: #0a0a3a;"
+                        >Feauture Products</h1>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </v-layout>
 
-       <v-container>
-           <v-flex class="text-center heading">
-                <div class="font-weight-normal text-uppercase subtitle">
-                    <h2>FEATURES PRODUCTS</h2>
-                </div>
-                
-                <div class="categories">
-                    <div class="row">
-                        <div class="col-3 ">
-                            <v-img src="@/assets/features/LongSleeve.jpg" />
-                        </div>
-                        <div class="col-3">
-                            <v-img src="@/assets/features/dress.jpg" />
-                        </div>
-                        <div class="col-3">
-                            <v-img src="@/assets/features/jacket.jpg" />
-                        </div>
-                         <div class="col-3">
-                            <v-img src="@/assets/features/pants.jpg" />
-                        </div>
-                    </div>
-                    
-                     <div class="row">
-                        <div class="col-3">
-                            <v-img src="@/assets/features/mens-pants-500x500.jpg" />
-                        </div>
-                        <div class="col-3">
-                            <v-img src="@/assets/features/shoes.jpg" />
-                        </div>
-                        <div class="col-3">
-                            <v-img src="@/assets/features/LSSleeve.jpg" />
-                        </div>
-                         <div class="col-3">
-                            <v-img src="@/assets/features/sfp.jpg" />
-                        </div>
-                    </div>
-                </div>
-            </v-flex>
-       </v-container>
-   </v-card>
+        <v-layout>
+            <v-container>
+                <v-row class="mx-19 ml-7">
+                    <v-col cols="5" md="4" sm=6 v-for="([src], i) in goals" :key="i">
+                        <v-hover v-slot:default="{ hover }">
+            
+                            <v-img :src="src" max-width="150" :elevation="hover ? 10 : 0" class="d-block ml-auto mr-auto mt-5"
+                            :class="{ 'zoom-efect': hover }" ></v-img>
+             
+                        </v-hover>
+                    </v-col>
+                </v-row>
+            </v-container>
+        </v-layout>
+
+    </section>
 </template>
 
-<script>
-    import { mapState } from 'vuex'
 
+<script>
     export default {
-        name: 'features',
-        computed: {
-            ...mapState(['mode'])
+        name: 'goal-section',
+        
+        data () {
+            return {
+                goals: [
+                    [require('@/assets/features/LongSleeve.jpg')],
+                    [require('@/assets/features/dress.jpg')],
+                    [require('@/assets/features/jacket.jpg')],
+                    [require('@/assets/features/LSSleeve.jpg')],
+                    [require('@/assets/features/pants.jpg')],
+                    [require('@/assets/features/mens-pants-500x500.jpg')],
+                ]
+            }
         }
     }
 </script>
 
 <style scoped lang="scss">
-.v-card {
-    border-radius: 0 !important;
-    -moz-webkit-border-radius: 0;
+#services {
     min-height: 100vh;
-    padding-top: 50px;
 }
-h2 {
-    font-size: 1.5rem;
-    font-family: 'Poppins', sans-serif;
-    text-transform: uppercase;
-    margin: 0;
-}
-.categories{
-    margin: 0px 0;
-}
-.col-3{
-    flex-basis: 30%;
-    min-width: 200px;
-}
-.col-3 img{
-    width: 50%;
+.zoom-efect {
+    transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    -ms-transition: all .5s;
+    transform : scale(1.2);
+    -moz-transform : scale(1.2);
+    -webkit-transform : scale(1.2);
+    -o-transform : scale(1.2);
+    -ms-transform : scale(1.2);
 }
 </style>
