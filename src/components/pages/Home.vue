@@ -17,7 +17,7 @@
                 </p>
                 <v-btn 
                   x-large 
-                  class="mt-3 text-capitalize pa-7" 
+                  class="mt-3 text-capitalize" 
                   id="btn"
                   rounded 
                   depressed
