@@ -1,8 +1,8 @@
 <template>
-    <section id="services">
-        <v-layout>
+    <section id="features">
+         <v-layout>
             <v-container>
-                <v-row class="goal-title">
+                <v-row class="title">
                     <v-col>
                         <h1 
                             class="font-weight-bold pb-3 text-center" 
@@ -34,7 +34,7 @@
 
 <script>
     export default {
-        name: 'goal-section',
+        name: 'features',
         
         data () {
             return {
@@ -52,8 +52,11 @@
 </script>
 
 <style scoped lang="scss">
-#services {
+#features{
+    border-radius: 0 !important;
+    -moz-webkit-border-radius: 0;
     min-height: 100vh;
+    padding-top: 50px;
 }
 .zoom-efect {
     transition: all .5s;
