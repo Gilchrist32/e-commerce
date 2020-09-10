@@ -124,6 +124,12 @@
                         price: "₱ 600.00",
                         image: 'https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/jacket%2Ffemale%2F7.jpg?alt=media&token=9ef81dcf-fbb6-46c2-acae-f33a0c286134'
                     },
+                     {
+                        id: 4,
+                        jacket: "ASST Series Jacket Stripe",
+                        price: "₱ 400.00",
+                        image: 'https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/jacket%2Fmen%2F9.jpg?alt=media&token=ee64e205-0a08-44bf-a1d1-fc88f126d1e0'
+                    },
                 ],
                 shirt: [
                     {
@@ -149,6 +155,12 @@
                         jacket: "Customised Designer T-Shirt ",
                         price: "₱ 110.00",
                         image: 'https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/shirt%2Ffemale%2F4.jpg?alt=media&token=fa5a39aa-e9fa-4d7c-8394-e0818f9fc985'
+                    },
+                    {
+                        id: 4,
+                        jacket: "Customised Designer T-Shirt ",
+                        price: "₱ 100.00",
+                        image: 'https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/shirt%2Ffemale%2F7.jpg?alt=media&token=7d293ccd-d64d-4aa9-b0dc-96ea5a64d5b7'
                     },
                 ]
             }
