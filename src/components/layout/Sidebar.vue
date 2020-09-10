@@ -10,7 +10,7 @@
                             max-width="250"
                             style="cursor: pointer;"
                             @click.prevent="scroll" 
-                            src="@/assets/blogo/logo.png"
+                            src="@/assets/img/ECOSHOP.svg"
                         ></v-img>
                     </v-list-item>
                     
