@@ -16,7 +16,7 @@
                 <div class="small-container">
                     <div class="row">
                         <div class="col-5 ml-9">
-                            <v-img src="@/assets/img/watch.jpg" class="offer-img" />
+                            <v-img src="@/assets/img/watch.svg" class="offer-img" />
                         </div>
                         <div class="col-5 pt-10">
                             <small>Exclusively Available on Shopee Store</small>
@@ -26,7 +26,7 @@
 
                             <br><br><br>
                             
-                            <v-btn x-large class="mt-3 text-capitalize pa-7" 
+                            <v-btn x-large class="mt-3 text-capitalize " 
                             rounded depressed id="btn"
                             @click="authDialog = true">Buy Now &#8594;
                             </v-btn>
