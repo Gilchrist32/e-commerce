@@ -16,7 +16,6 @@
             </v-container>
         <v-btn class="ml-5" color="#F48FB1" depressed>All Products &#8594;</v-btn>
         <v-container>
-            <v-card id="products">
             <horizontal-list :items="jackets" class="mx-12">
                 <template v-slot:default="{ item }">
                     <v-hover v-slot:default="{hover}">
@@ -48,11 +47,9 @@
                     </v-hover>
                 </template>
             </horizontal-list>
-            </v-card>
         </v-container>
 
          <v-container>
-            <v-card id="products">
             <horizontal-list :items="shirt" class="mx-12">
                 <template v-slot:default="{ item }">
                     <v-hover v-slot:default="{hover}">
@@ -84,7 +81,6 @@
                     </v-hover>
                 </template>
             </horizontal-list>
-            </v-card>
         </v-container>
         </v-card>
     </section>
