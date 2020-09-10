@@ -1,7 +1,7 @@
 <template>
     <div class="navbar">
 
-        <v-app-bar app flat dense clipped-left style="background-color: #F48FB1">
+        <v-app-bar app flat clipped-left style="background: radial-gradient(#fff,#ffd6d6);">
             
             <v-btn icon @click="drawer = !drawer">
                 <v-icon class="icontify"
@@ -11,10 +11,10 @@
             <v-spacer></v-spacer>
 
             <v-img 
-                max-width="150"
+                max-width="80"
                 style="cursor: pointer;"
                 @click.prevent="scroll" 
-                src="@/assets/blogo/logo.png"
+                src="@/assets/img/ECO.svg"
             ></v-img>
 
             <v-spacer></v-spacer>
