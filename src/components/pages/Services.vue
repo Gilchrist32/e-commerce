@@ -14,24 +14,24 @@
 
             <div class="offer">
                 <div class="small-container">
-                    <div class="row">
-                        <div class="col-5 ml-9">
-                            <v-img src="@/assets/img/watch.svg" class="offer-img" />
-                        </div>
-                        <div class="col-5 pt-10">
-                            <small>Exclusively Available on Shopee Store</small>
+                    <v-row>
+                        <v-col cols="12" sm="6">
+                            <v-img src="@/assets/img/watch.svg" class="offer-img d-block ml-auto mr-auto" />
+                        </v-col>
+                        <v-col cols="12" sm="6">
+                            <p>Exclusively Available on Shopee Store</p>
                             <h1>Smart Band 4</h1>
                             <small>The Mi Smart Band 4 features a 39.9% larger (than Mi Band 3) AMOLED color
                             full-touch display with adjustable brightness, so everything is clear as can be. </small>
 
                             <br><br><br>
                             
-                            <v-btn x-large class="mt-3 text-capitalize " 
+                            <v-btn x-large class="mt-3 text-capitalize pa-7" 
                             rounded depressed id="btn"
                             @click="authDialog = true">Buy Now &#8594;
                             </v-btn>
-                        </div>
-                    </div>
+                        </v-col>
+                    </v-row>
                 </div>
             </div>
 
