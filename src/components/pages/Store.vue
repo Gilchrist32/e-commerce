@@ -32,10 +32,13 @@
                                 <div class="text--primary font-weight-medium">
                                     {{ item.jacket }}
                                 </div>
-                                <div class="text-secondary pt-2">
+                                <div class="primary--text pt-2">
                                     {{ item.price }}
                                 </div>
                             </v-card-text>
+                             <v-rating :value="item.value" color="amber" align="left" 
+                                      dense half-increments readonly size="14"  class="ml-3">
+                            </v-rating>
 
                             <v-card-actions>
                                 <v-spacer></v-spacer>
@@ -66,10 +69,13 @@
                                 <div class="text--primary font-weight-medium">
                                     {{ item.jacket }}
                                 </div>
-                                <div class="text-secondary pt-2">
+                                <div class="primary--text pt-2">
                                     {{ item.price }}
                                 </div>
                             </v-card-text>
+                            <v-rating :value="item.value" color="amber" align="left" 
+                                      dense half-increments readonly size="14"  class="ml-3">
+                            </v-rating>
 
                             <v-card-actions>
                                 <v-spacer></v-spacer>
@@ -100,30 +106,35 @@
                         id: 0,
                         jacket: "Jacket Long Sleeve Men",
                         price: '₱ 1280.00',
+                        value: 5.0,
                         image: 'https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/jacket%2Fmen%2F3.jpg?alt=media&token=8f7bc3bc-df35-4d0d-9f5e-74f0c07a07b6'
                     },
                     {
                         id: 1,
                         jacket: "Jacket Red Long Sleeve Men",
                         price: "₱ 800.00",
+                        value: 4.5,
                         image: "https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/jacket%2Fmen%2F7.jpg?alt=media&token=962a0199-7bfb-456e-97b2-ace7fb8b3205"
                     },
                     {
                         id: 2,
                         jacket: "Stripe Jacket Female",
                         price: "₱ 400.00",
+                        value: 3.5,
                         image: 'https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/jacket%2Ffemale%2F1.jpg?alt=media&token=4b95a15c-3849-489a-9922-5ea6cd30c0ef'
                     },
                     {
                         id: 3,
                         jacket: "Sport Jacket Female",
                         price: "₱ 600.00",
+                        value: 4.5,
                         image: 'https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/jacket%2Ffemale%2F7.jpg?alt=media&token=9ef81dcf-fbb6-46c2-acae-f33a0c286134'
                     },
                      {
                         id: 4,
                         jacket: "ASST Series Jacket Stripe",
                         price: "₱ 400.00",
+                        value: 4.5,
                         image: 'https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/jacket%2Fmen%2F9.jpg?alt=media&token=ee64e205-0a08-44bf-a1d1-fc88f126d1e0'
                     },
                 ],
@@ -132,30 +143,35 @@
                         id: 0,
                         jacket: "Polo Shirt for Female",
                         price: '₱ 220.00',
+                        value: 4.0,
                         image: 'https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/shirt%2Ffemale%2F1.jpg?alt=media&token=42bbcd36-7f3b-47cf-80a7-212e440a4601'
                     },
                     {
                         id: 1,
                         jacket: "Polo",
                         price: "₱ 140.00",
+                        value: 5.0,
                         image: "https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/shirt%2Ffemale%2F2.jpg?alt=media&token=2d452e9a-9519-4bd5-b86e-1b57353b3902"
                     },
                     {
                         id: 2,
                         jacket: "Unicorn Shirt Female",
                         price: "₱ 110.00",
+                        value: 3.0,
                         image: 'https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/shirt%2Ffemale%2F3.jpg?alt=media&token=ddd90fda-2cfa-4526-b75b-921255c36388'
                     },
                     {
                         id: 3,
                         jacket: "Customised Designer T-Shirt ",
                         price: "₱ 110.00",
+                        value: 3.0,
                         image: 'https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/shirt%2Ffemale%2F4.jpg?alt=media&token=fa5a39aa-e9fa-4d7c-8394-e0818f9fc985'
                     },
                     {
                         id: 4,
                         jacket: "Customised Designer T-Shirt ",
                         price: "₱ 100.00",
+                        value: 4.0,
                         image: 'https://firebasestorage.googleapis.com/v0/b/login-6709e.appspot.com/o/shirt%2Ffemale%2F7.jpg?alt=media&token=7d293ccd-d64d-4aa9-b0dc-96ea5a64d5b7'
                     },
                 ]
