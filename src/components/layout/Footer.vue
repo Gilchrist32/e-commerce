@@ -15,9 +15,18 @@
             <div class="footer-col col-md-3 mx-auto">
                    <h5 class="ttitle">Useful Links</h5>
                    <hr class="red accent-2 mb-4 mt-0 d-inline-block mx-auto" style="width: 80px" /><br>
-                  <span>About</span><br>
-                  <span>Features</span><br>
-                  <span>Services</span>
+                 <a href="#about" style="text-decoration:none;display:block;color:white">
+                    <span onclick="about()">About</span>
+                  </a>
+                   <a href="#features" style="text-decoration:none;display:block;color:white">
+                    <span onclick="features()">Features</span>
+                  </a>
+                   <a href="#services" style="text-decoration:none;display:block;color:white">
+                    <span onclick="services()">Services</span>
+                  </a>
+                   <a href="#store" style="text-decoration:none;display:block;color:white">
+                    <span onclick="store()">Products</span>
+                  </a>
               </div>
 
               <div class="footer-col col-md-3">
@@ -50,7 +59,7 @@
       <div class="white--text pt-0 mt-auto">
         <div class="footer-copyright text-center py-0">
           <v-container fluid>
-          &copy; {{ new Date().getFullYear() }}  Shopee Store E-Commerce
+          &copy; {{ new Date().getFullYear() }}  ECO Shop
         </v-container>
       </div>
     </div>
