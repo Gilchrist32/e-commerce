@@ -19,8 +19,8 @@
             <horizontal-list :items="jackets" class="mx-12">
                 <template v-slot:default="{ item }">
                     <v-hover v-slot:default="{hover}">
-                        <v-card flat outlined :class="{ up: hover }" :elevation="hover ? 7 : 0" max-width="300" align="center">
-                            <v-img height="200px" width="150" :src="item.image" :lazy-src="item.image">
+                        <v-card flat outlined :class="{ up: hover }" :elevation="hover ? 7 : 0" max-width="250" align="center">
+                            <v-img height="200px" width="220px" :src="item.image" :lazy-src="item.image">
                             <v-expand-transition>
                                 <div v-if="hover" class="d-flex transition-fast-in-fast-out red v-card--reveal display-3 white--text"
                                 style="height: 100%">
@@ -53,8 +53,8 @@
             <horizontal-list :items="shirt" class="mx-12">
                 <template v-slot:default="{ item }">
                     <v-hover v-slot:default="{hover}">
-                        <v-card flat outlined :class="{ up: hover }" :elevation="hover ? 7 : 0" max-width="300" align="center">
-                            <v-img height="200px" width="150" :src="item.image" :lazy-src="item.image">
+                        <v-card flat outlined :class="{ up: hover }" :elevation="hover ? 7 : 0" max-width="250" align="center">
+                            <v-img height="200px" width="220px" :src="item.image" :lazy-src="item.image">
                             <v-expand-transition>
                                 <div v-if="hover" class="d-flex transition-fast-in-fast-out red v-card--reveal display-3 white--text"
                                 style="height: 100%">
